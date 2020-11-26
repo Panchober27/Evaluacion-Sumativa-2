@@ -5,6 +5,8 @@
  */
 package cl.inacap.bean;
 
+import cl.inacap.modelo.Producto;
+import java.util.List;
 import javax.ejb.Local;
 
 /**
@@ -14,12 +16,10 @@ import javax.ejb.Local;
 @Local
 public interface ServicioLocal {
 
-    public void buscarProducto();
-
-    public void vender();
-
-    public void getProductos();// Retorna Lista de Productos.
+    Producto buscarProducto(int codigo);
     
+    List<Producto> getProductos();
     
+    String vender(int codigo, int cantidad);
     
 }

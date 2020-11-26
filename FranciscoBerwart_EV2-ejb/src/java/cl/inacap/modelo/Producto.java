@@ -15,6 +15,7 @@ public class Producto {
     private String nombre;
     private int precio;
     private int stock;
+    private String categoriaS;
     
     private Categoria categoria;
     
@@ -71,6 +72,18 @@ public class Producto {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
+
+    
+    
     
     
     

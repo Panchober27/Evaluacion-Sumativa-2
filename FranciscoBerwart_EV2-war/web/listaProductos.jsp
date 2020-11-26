@@ -1,7 +1,7 @@
 <%-- 
     Document   : verProductos
-    Created on : 26-11-2020, 4:01:17
-    Author     : franc
+    Created on : 26-11-2020, 0:57:22
+    Author     : francisco
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -25,8 +25,8 @@
         <hr/>
 
         <!-- Colocar tabla con resultados de la busqueda de la lista! -->
-        
-        <table class="table table-bordered"  action="listar.do" method="get">
+
+        <table class="table table-bordered">
             <thead>
                 <tr>
                     <th>Codigo</th>
@@ -37,7 +37,15 @@
                 </tr>
             </thead>
             <tbody>
-                
+                <c:forEach items="${requestScope.listaProd}" var="p" >
+                <tr>
+                    <td>${p.codigo}</td>
+                    <td>${p.nombre}</td>
+                    <td>$${p.precio}</td>
+                    <td>${p.stock}</td>
+                    <td>${p.categoria}</td>
+                </tr>
+                </c:forEach>
             </tbody>
         </table>
 

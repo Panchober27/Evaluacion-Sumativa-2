@@ -8,11 +8,12 @@ package cl.inacap.bean;
 import cl.inacap.modelo.Categoria;
 import cl.inacap.modelo.Producto;
 import java.util.ArrayList;
+import java.util.List;
 import javax.ejb.Singleton;
 
 /**
  *
- * @author franc
+ * @author francisco
  */
 @Singleton
 public class Servicio implements ServicioLocal {
@@ -32,18 +33,19 @@ public class Servicio implements ServicioLocal {
     }
 
     @Override
-    public void buscarProducto() {
+    public Producto buscarProducto(int codigo) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public void vender() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public List<Producto> getProductos() {
+        //Lista de Productos.
+        return listaProducto; 
     }
 
     @Override
-    public void getProductos() {
+    public String vender(int codigo, int cantidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
 }
