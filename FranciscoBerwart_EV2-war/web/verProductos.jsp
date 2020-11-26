@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 25-11-2020, 22:42:51
+    Document   : verProductos
+    Created on : 26-11-2020, 0:57:22
     Author     : francisco
 --%>
 
@@ -12,15 +12,16 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <c:import url="partials/head.jsp"/>
         <link href="public/css/main.css" rel="stylesheet" type="text/css"/>
-        <title>Index</title>
+        <title>Listado Productos</title>
     </head>
     <body>
         <c:import url="partials/nav.jsp"/>
         
-        <h2 style="text-align: center">Index de la Evaluacion Sumativa 2</h2>
+        <h2 style="text-align: center">Listado de Productos</h2>
         
-        
-        
+        <p style="text-align: center">
+            Interfaz que muestra una lista de los Productos.
+        </p>
         
     </body>
 </html>
