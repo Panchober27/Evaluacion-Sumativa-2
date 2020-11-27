@@ -27,5 +27,35 @@
             y poder confirmar la venta, como se especifica en el punto 3.
         </p>
         
+        
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Stock</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <c:forEach items="${requestScope.listaProd}" var="p" >
+                <tr>
+                    <td>${p.codigo}</td>
+                    <td>${p.nombre}</td>
+                    <td>$${p.precio}</td>
+                    <td>${p.stock}</td>
+                    <td>${p.categoria}</td>
+                    <td>
+                        <button class="btn-primary">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                    </td>
+                </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+
+        
     </body>
 </html>

@@ -34,18 +34,19 @@ public class Servicio implements ServicioLocal {
 
     @Override
     public Producto buscarProducto(int codigo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        // Se recupera desde la peticion el codigo para buscar.
+        return listaProducto.get(codigo);
     }
 
     @Override
     public List<Producto> getProductos() {
         //Lista de Productos.
-        return listaProducto; 
+        return listaProducto;
     }
 
     @Override
     public String vender(int codigo, int cantidad) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }

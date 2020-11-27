@@ -10,10 +10,13 @@
                 <a class="nav-link" href="index.jsp"><i class="fas fa-home"></i> Index</a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="buscarProducto.jsp" ><i class="fas fa-search"></i> Buscar Producto</a>
+            </li>
+            <li class="nav-item active">
                 <a  class="nav-link" href="listar.do"><i class="fas fa-clipboard-list"></i> Ver Productos</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="vender.jsp"><i class="fas fa-hand-holding-usd"></i> Vender</a>
+                <a class="nav-link" href="vender.do"><i class="fas fa-hand-holding-usd"></i> Vender</a>
             </li>
         </ul>
     </div>

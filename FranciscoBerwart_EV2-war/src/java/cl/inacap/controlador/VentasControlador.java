@@ -25,6 +25,8 @@ public class VentasControlador extends HttpServlet {
     Servicio serv = new Servicio();
     ArrayList<Producto> lista = new ArrayList();
     
+    
+    
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -69,10 +71,9 @@ public class VentasControlador extends HttpServlet {
          * este metodo servira de base para el proximo.
         */
         
-        // Intento personal de ejecutar el metodo.
-        
+        // Variable para almacenar el servletPath de la peticion.
         String strPath = request.getServletPath();
-        
+        int codigo;
         
         if(strPath.equals("/listar.do")){ // El path es para listar los productos.
             // Ejecutar metodo getProductos();
@@ -81,8 +82,24 @@ public class VentasControlador extends HttpServlet {
             request.setAttribute("listaProd", lista);
             //Redireccionar hacia listaProductos.jsp
             request.getRequestDispatcher("listaProductos.jsp").forward(request, response);
+        } else if(strPath.equals("/vender.do")){
+            // Ejecutar metodo getProductos();
+            lista = (ArrayList<Producto>) serv.getProductos();
+            //Generar un atributo en el request con la lista de productos.
+            request.setAttribute("listaProd", lista);
+            //Redireccionar hacia vender.jsp
+            request.getRequestDispatcher("vender.jsp").forward(request, response);
             
-        } 
+        } else if(strPath.equals("/buscar.do")){
+            // Se recupera el codigo a buscar desde la peticion.
+            
+            codigo = (int) request.getAttribute("txtCodigoProducto");
+            
+            request.setAttribute("Producto", serv.buscarProducto(codigo));
+            //Redireccionar hacia buscar.jsp
+            request.getRequestDispatcher("buscarProducto.jsp").forward(request, response);
+            
+        }
         
     }
 
